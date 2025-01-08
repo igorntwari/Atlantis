@@ -1,7 +1,12 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { TrendingUp, Zap, FlameIcon as Fire } from "lucide-react";
-
-function StatCard({ icon, label, value }) {
+import { ReactElement } from "react";
+interface statusCardProps {
+  icon: ReactElement;
+  label: string;
+  value: string;
+}
+function StatCard({ icon, label, value }: statusCardProps) {
   return (
     <Card className="bg-gray-900 border-gray-800 bg0">
       <CardContent className="p-6">
