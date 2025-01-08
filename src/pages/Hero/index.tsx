@@ -1,34 +1,16 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { TrendingUp, Zap, FlameIcon as Fire, Clock } from "lucide-react";
+import { Clock } from "lucide-react";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import FeaturedContent from "../Featured";
+import CurrentStatus from "../Status";
 
 function Hero() {
   return (
     <main className="container mx-auto px-4 py-8">
-      {/* Hero Section */}
       <FeaturedContent />
-      {/* Stats Section */}
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-        <StatCard
-          icon={<TrendingUp className="h-5 w-5" />}
-          label="Volume 24h"
-          value="12,345 ETH"
-        />
-        <StatCard
-          icon={<Zap className="h-5 w-5" />}
-          label="Floor Price"
-          value="2.5 ETH"
-        />
-        <StatCard
-          icon={<Fire className="h-5 w-5" />}
-          label="Items"
-          value="10,000"
-        />
-      </section>
-
+      <CurrentStatus />
       {/* Main Content */}
       <Tabs defaultValue="trending" className="mb-12">
         <TabsList className="bg-gray-900">
@@ -107,20 +89,5 @@ function ActivityItem({ type, item, price, time }) {
         <p className="text-sm text-gray-400">{time}</p>
       </div>
     </div>
-  );
-}
-function StatCard({ icon, label, value }) {
-  return (
-    <Card className="bg-gray-900 border-gray-800">
-      <CardContent className="p-6">
-        <div className="flex items-center gap-4">
-          <div className="p-2 bg-gray-800 rounded-lg">{icon}</div>
-          <div>
-            <p className="text-gray-400 text-sm">{label}</p>
-            <p className="text-xl font-bold">{value}</p>
-          </div>
-        </div>
-      </CardContent>
-    </Card>
   );
 }
