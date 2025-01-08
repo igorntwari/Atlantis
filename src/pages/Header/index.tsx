@@ -65,6 +65,13 @@ const Navbar = () => {
       {isMobileNavOpen && (
         <nav className="lg:hidden bg-gray-900 text-gray-300">
           <div className="container mx-auto px-4 py-4">
+            <div className="relative">
+              <Input
+                placeholder="Search items and collections"
+                className="bg-gray-900 border-gray-800"
+              />
+              <Search className="absolute right-3 top-2.5 h-5 w-5 text-gray-400" />
+            </div>
             <a href="#" className="block py-2 hover:text-white">
               Collections
             </a>
