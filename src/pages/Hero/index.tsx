@@ -1,37 +1,15 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { TrendingUp, Zap, FlameIcon as Fire, Clock } from "lucide-react";
 import Image from "next/image";
-import { Button } from "@/components/ui/Button";
-import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import FeaturedContent from "../Featured";
 
 function Hero() {
   return (
     <main className="container mx-auto px-4 py-8">
       {/* Hero Section */}
-      <section className="mb-12">
-        <div className="relative h-[400px] rounded-lg overflow-hidden">
-          <Image
-            src="/placeholder.svg?height=400&width=1200"
-            alt="Featured Collection"
-            width={1200}
-            height={400}
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent" />
-          <div className="absolute bottom-0 left-0 p-8">
-            <h2 className="text-4xl font-bold mb-2">Featured Collection</h2>
-            <p className="text-gray-300 mb-4">
-              Discover the most extraordinary digital assets
-            </p>
-            <Button className="bg-white text-black hover:bg-gray-200">
-              View Collection
-            </Button>
-          </div>
-        </div>
-      </section>
-
+      <FeaturedContent />
       {/* Stats Section */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
         <StatCard
