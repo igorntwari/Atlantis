@@ -1,6 +1,7 @@
 import { Clock } from "lucide-react";
 import FeaturedContent from "../Featured";
 import CurrentStatus from "../Status";
+import TabsNavigation from "../Tabs";
 
 function Hero() {
   return (
@@ -8,7 +9,7 @@ function Hero() {
       <FeaturedContent />
       <CurrentStatus />
       {/* Main Content */}
-
+      <TabsNavigation />
       {/* Activity Section */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-6">Recent Activity</h2>
