@@ -5,7 +5,7 @@ import TabsNavigation from "../Tabs";
 
 function Hero() {
   return (
-    <main className="container mx-auto px-4 py-8">
+    <main className=" mx-auto px-14 py-8 w-full">
       <FeaturedContent />
       <CurrentStatus />
       {/* Main Content */}
