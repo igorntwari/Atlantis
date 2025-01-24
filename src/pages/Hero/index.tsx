@@ -2,10 +2,11 @@ import { Clock } from "lucide-react";
 import FeaturedContent from "../Featured";
 import CurrentStatus from "../Status";
 import TabsNavigation from "../Tabs";
+import { ActivityItemProps } from "@/types/activity";
 
 function Hero() {
   return (
-    <main className="container mx-auto px-4 py-8">
+    <main className=" mx-auto px-14 py-8 w-full">
       <FeaturedContent />
       <CurrentStatus />
       {/* Main Content */}
@@ -31,7 +32,7 @@ function Hero() {
 
 export default Hero;
 
-function ActivityItem({ type, item, price, time }) {
+function ActivityItem({ type, item, price, time }: ActivityItemProps) {
   return (
     <div className="flex items-center justify-between py-3 border-b border-gray-800 last:border-0">
       <div className="flex items-center gap-4">
